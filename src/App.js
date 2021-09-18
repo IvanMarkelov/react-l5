@@ -1,18 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import "./App.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+function App() {
+  const {
+    register,
+    formState: { errors, submitCount },
+    handleSubmit,
+  } = useForm();
+  const onSubmit = (e) => console.log(e);
+  return (
+    <div className="App">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input {...register("firstName")} />
+        <input {...register("lastName", { required: true, minLength: 3 })} />
+        {errors.lastName && <span>Last name is required</span>}
 
-    this.state = {
-      num: 0,
-    };
-  }
-
-  render() {
-    return <div className="App"></div>;
-  }
+        <input {...register("age", { required: true, max: 35, min: 18, pattern: /\d\d/ })} />
+        {errors.age && <span>Age is required (18+)</span>}
+        <input type="submit" />
+      </form>
+    </div>
+  );
 }
 
 export default App;
