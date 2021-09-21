@@ -17,8 +17,7 @@
     "react-hook-form": "^7.15.3",
     "react-lorem-component": "^0.13.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2",
-    "yup": "^0.32.9"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
