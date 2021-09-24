@@ -13,6 +13,39 @@
   }
 }
 
+nav {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px;
+  height: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+}
+
+.logo {
+  margin: 20px;
+}
+
+.nav-link {
+  margin: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5)
+}
+
+.active {
+  color: rgba(0, 0, 0, 0.9)
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
