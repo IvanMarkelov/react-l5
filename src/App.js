@@ -1,30 +1,29 @@
 import React from "react";
-import {
-  BrowserRouter,
-  useLocation,
-  useParams,
-  useHistory,
-  useRouteMatch,
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
 import "./App.css";
+import { Header } from "./components/Header";
+import { Result } from "./components/Result";
+import { Step1 } from "./components/Step1";
+import { Step2 } from "./components/Step2";
+import { Step3 } from "./components/Step3";
 
 function App() {
   const history = useHistory();
 
   console.log(history);
 
-  const handleClick = () => {
-    history.push("/about");
-  };
-
   return (
-    <div className="App">
+    <>
+      <Header />
       <BrowserRouter>
-        <h1>Some Page</h1>
-        <p>Some text</p>
-        <button onClick={handleClick}>To About</button>
+        <Switch>
+          <Route exact path="/" component={Step1} />
+          <Route exact path="/step2" component={Step2} />
+          <Route exact path="/step3" component={Step3} />
+          <Route exact path="/result" component={Result} />
+        </Switch>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
