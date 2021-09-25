@@ -9,8 +9,6 @@
     "web-vitals": "1.1.2",
     "normalize.css": "8.0.1",
     "react-scripts": "4.0.3",
-    "react-dropzone": "^11.4.2",
-    "libphonenumber-js": "^1.9.34",
     "@babel/runtime": "7.15.4",
     "react-hook-form": "7.15.3",
     "@blueprintjs/core": "3.49.1",
